@@ -4,11 +4,15 @@ var CountdownForm = require('CountdownForm');
 
 var Countdown = React.createClass({
   getInitialState: function () {
-    return {count: 0};
+    return {
+      count: 0,
+      countdownStatus : 'stopped'
+    };
   },
   handleSetCountdown: function (seconds) {
     this.setState({
-      count: seconds
+      count: seconds,
+      countdownStatus : 'started'
     });
   },
   render: function () {
